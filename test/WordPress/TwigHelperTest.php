@@ -72,7 +72,7 @@ class TwigHelperTest extends \PHPUnit_Framework_TestCase {
     $this->helper->addSourceDir('lorem/ipsum');
     $actual = $this->helper->getSourceDirs();
 
-    $this->assertContains('lorem/ipsum', $this->helper->getSourceDirs());
+    $this->assertContains('lorem/ipsum', $actual);
   }
 
   function test_it_has_a_twig_reaper() {
