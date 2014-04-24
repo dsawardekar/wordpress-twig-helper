@@ -46,9 +46,9 @@ class TwigPrecompilerTest extends \PHPUnit_Framework_TestCase {
     $env          = new Twig_Environment($loader, $opts);
 
     $this->compiler->setEnvironment($env);
-
     $cacheFile = $env->getCacheFilename('hello.twig');
-    $actual = $this->compiler->compileTemplate($templatePath);
+
+    $this->compiler->compileTemplate($templatePath);
     $this->assertTrue(file_exists($cacheFile));
   }
 
@@ -60,8 +60,8 @@ class TwigPrecompilerTest extends \PHPUnit_Framework_TestCase {
     $env          = new Twig_Environment($loader, $opts);
 
     $this->compiler->setEnvironment($env);
+    $this->compiler->compileDir('templates');
 
-    $actual = $this->compiler->compileDir('templates');
     $this->assertTrue(file_exists($env->getCacheFilename('hello.twig')));
     $this->assertTrue(file_exists($env->getCacheFilename('bye.twig')));
   }
@@ -74,8 +74,8 @@ class TwigPrecompilerTest extends \PHPUnit_Framework_TestCase {
     $env          = new Twig_Environment($loader, $opts);
 
     $this->compiler->setEnvironment($env);
+    $this->compiler->compile(array('templates'));
 
-    $actual = $this->compiler->compile(array('templates'));
     $this->assertTrue(file_exists($env->getCacheFilename('hello.twig')));
     $this->assertTrue(file_exists($env->getCacheFilename('bye.twig')));
   }
