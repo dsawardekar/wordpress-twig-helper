@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
-<testsuites colors="true">
-  <testsuite name="WordPress Twig Helpers Test Suite">
-    <directory>test</directory>
-  </testsuite>
-</testsuites>
+<phpunit colors="true" bootstrap="vendor/autoload.php">
+  <testsuites colors="true">
+    <testsuite name="WordPress Twig Helpers Test Suite">
+      <directory>test</directory>
+    </testsuite>
+  </testsuites>
+</phpunit>
