@@ -4,6 +4,8 @@ namespace WordPress;
 
 class TwigPrecompilerAppTest extends \PHPUnit_Framework_TestCase {
 
+  public $app;
+
   function setUp() {
     $this->app = new TwigPrecompilerApp();
   }

@@ -9,6 +9,8 @@ use \DateTime;
 
 class TwigPrecompilerTest extends \PHPUnit_Framework_TestCase {
 
+  public $compiler;
+
   function setUp() {
     $this->compiler = new TwigPrecompiler();
   }
@@ -44,36 +46,34 @@ class TwigPrecompilerTest extends \PHPUnit_Framework_TestCase {
     $env          = new Twig_Environment($loader, $opts);
 
     $this->compiler->setEnvironment($env);
-
     $cacheFile = $env->getCacheFilename('hello.twig');
-    $actual = $this->compiler->compileTemplate($templatePath);
+
+    $this->compiler->compileTemplate($templatePath);
     $this->assertTrue(file_exists($cacheFile));
   }
 
   function test_it_can_compile_directory_of_templates() {
-    $templatePath = 'hello.twig';
     $outputDir    = 'dist/templates';
     $loader       = new Twig_Loader_Filesystem('templates');
     $opts         = array( 'cache' => $outputDir);
     $env          = new Twig_Environment($loader, $opts);
 
     $this->compiler->setEnvironment($env);
+    $this->compiler->compileDir('templates');
 
-    $actual = $this->compiler->compileDir('templates');
     $this->assertTrue(file_exists($env->getCacheFilename('hello.twig')));
     $this->assertTrue(file_exists($env->getCacheFilename('bye.twig')));
   }
 
   function test_it_can_compile_directories_of_templates() {
-    $templatePath = 'hello.twig';
     $outputDir    = 'dist/templates';
     $loader       = new Twig_Loader_Filesystem('templates');
     $opts         = array( 'cache' => $outputDir);
     $env          = new Twig_Environment($loader, $opts);
 
     $this->compiler->setEnvironment($env);
+    $this->compiler->compile(array('templates'));
 
-    $actual = $this->compiler->compile(array('templates'));
     $this->assertTrue(file_exists($env->getCacheFilename('hello.twig')));
     $this->assertTrue(file_exists($env->getCacheFilename('bye.twig')));
   }
