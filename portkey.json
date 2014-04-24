@@ -1,0 +1,10 @@
+{
+  "lib/WordPress/*.php": {
+    "type": "helper",
+    "test": "test/WordPress/%sTest.php"
+  },
+  "test/WordPress/*Test.php": {
+    "type": "test",
+    "alternate": "lib/WordPress/%s.php"
+  }
+}
