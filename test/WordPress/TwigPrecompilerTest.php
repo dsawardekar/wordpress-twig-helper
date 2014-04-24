@@ -53,7 +53,6 @@ class TwigPrecompilerTest extends \PHPUnit_Framework_TestCase {
   }
 
   function test_it_can_compile_directory_of_templates() {
-    $templatePath = 'hello.twig';
     $outputDir    = 'dist/templates';
     $loader       = new Twig_Loader_Filesystem('templates');
     $opts         = array( 'cache' => $outputDir);
@@ -67,7 +66,6 @@ class TwigPrecompilerTest extends \PHPUnit_Framework_TestCase {
   }
 
   function test_it_can_compile_directories_of_templates() {
-    $templatePath = 'hello.twig';
     $outputDir    = 'dist/templates';
     $loader       = new Twig_Loader_Filesystem('templates');
     $opts         = array( 'cache' => $outputDir);
