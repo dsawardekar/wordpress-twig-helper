@@ -1,6 +1,6 @@
 {
   "name": "dsawardekar/wordpress-twig-helper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "library",
   "description": "Helpers for using Twig with WordPress",
   "keywords": ["twig","wordpress"],
