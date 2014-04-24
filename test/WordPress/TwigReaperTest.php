@@ -4,6 +4,8 @@ use WordPress\TwigReaper;
 
 class TwigReaperTest extends PHPUnit_Framework_TestCase {
 
+  public $reaper;
+
   function setUp() {
     $this->reaper = new TwigReaper();
   }

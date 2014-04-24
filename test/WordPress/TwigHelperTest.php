@@ -6,6 +6,8 @@ use WordPress\TwigReaper;
 
 class TwigHelperTest extends \PHPUnit_Framework_TestCase {
 
+  public $helper;
+
   function setUp() {
     $this->helper = new TwigHelper();
   }

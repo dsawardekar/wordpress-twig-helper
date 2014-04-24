@@ -9,6 +9,8 @@ use \DateTime;
 
 class TwigPrecompilerTest extends \PHPUnit_Framework_TestCase {
 
+  public $compiler;
+
   function setUp() {
     $this->compiler = new TwigPrecompiler();
   }

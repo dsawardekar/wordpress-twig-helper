@@ -4,6 +4,8 @@ namespace WordPress;
 
 class TwigPrecompiler {
 
+  protected $twigEnv = null;
+
   function setEnvironment($twigEnv) {
     $this->twigEnv = $twigEnv;
   }
@@ -20,7 +22,6 @@ class TwigPrecompiler {
 
   function compileDir($sourceDir) {
     $templates = $this->templateNamesInDir($sourceDir);
-    $env       = $this->twigEnv;
 
     foreach ($templates as $template) {
       $this->compileTemplate($template);
