@@ -34,6 +34,7 @@ class TwigHelperTest extends \PHPUnit_Framework_TestCase {
 
   function test_it_knows_if_cache_dir_exists() {
     $this->helper->setBaseDir(getcwd());
+    $this->helper->setCacheDir('test');
     $actual = $this->helper->hasCacheDir();
     $this->assertTrue($actual);
   }
@@ -46,9 +47,9 @@ class TwigHelperTest extends \PHPUnit_Framework_TestCase {
   }
 
   function test_it_adds_cache_dir_to_twig_options() {
-    $this->helper->setCacheDir('dist/templates');
+    $this->helper->setCacheDir('test');
     $opts = $this->helper->getTwigOptions();
-    $this->assertEquals('dist/templates', $opts['cache']);
+    $this->assertEquals('test', $opts['cache']);
   }
 
   function test_it_disables_caching_if_cache_dir_is_absent() {
