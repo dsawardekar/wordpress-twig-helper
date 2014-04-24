@@ -1,4 +1,4 @@
-## WordPress Twig Helper ![Build Status][1]
+## WordPress Twig Helper ![Build Status][1]&nbsp; [![Scrutinizer Code Quality][3]][4]
 
 A tiny Library for using [Twig][2] Templates in WordPress Plugins & Themes.
 
@@ -62,4 +62,5 @@ MIT License. Copyright © 2014 Darshan Sawardekar.
 
 [1]: https://travis-ci.org/dsawardekar/wordpress-twig-helper.png
 [2]: http://twig.sensiolabs.org/
-
+[3]: https://scrutinizer-ci.com/g/dsawardekar/wordpress-twig-helper/badges/quality-score.png?s=02941b0925a4ba4ec2d9c1efcfa3e488e56d7c4c
+[4]: https://scrutinizer-ci.com/g/dsawardekar/wordpress-twig-helper/
