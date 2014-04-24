@@ -1,7 +1,6 @@
 <?php
 
 use WordPress\TwigReaper;
-use Twig_Loader_Filesystem;
 
 class TwigReaperTest extends PHPUnit_Framework_TestCase {
 
