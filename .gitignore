@@ -2,4 +2,5 @@
 *.swo
 build
 vendor/*
-dist
+dist/*
+!dist/.gitadd
