@@ -1,8 +1,8 @@
 <?php
 
-namespace WordPress;
+namespace WpTwigHelper;
 
-use WordPress\TwigReaper;
+use WpTwigHelper\TwigReaper;
 
 class TwigHelper {
 

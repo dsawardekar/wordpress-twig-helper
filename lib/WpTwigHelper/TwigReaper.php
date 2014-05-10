@@ -1,6 +1,6 @@
 <?php
 
-namespace WordPress;
+namespace WpTwigHelper;
 
 use Twig_Loader_Chain;
 use Twig_Loader_Filesystem;

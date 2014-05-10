@@ -1,9 +1,9 @@
 <?php
 
-namespace WordPress;
+namespace WpTwigHelper;
 
-use WordPress\TwigPrecompiler;
-use WordPress\TwigReaper;
+use WpTwigHelper\TwigPrecompiler;
+use WpTwigHelper\TwigReaper;
 
 class TwigPrecompilerApp {
 

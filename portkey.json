@@ -1,10 +1,10 @@
 {
-  "lib/WordPress/*.php": {
+  "lib/WpTwigHelper/*.php": {
     "type": "helper",
-    "test": "test/WordPress/%sTest.php"
+    "test": "test/WpTwigHelper/%sTest.php"
   },
-  "test/WordPress/*Test.php": {
+  "test/WpTwigHelper/*Test.php": {
     "type": "test",
-    "alternate": "lib/WordPress/%s.php"
+    "alternate": "lib/WpTwigHelper/%s.php"
   }
 }

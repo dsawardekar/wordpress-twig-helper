@@ -1,8 +1,8 @@
 <?php
 
-namespace WordPress;
+namespace WpTwigHelper;
 
-use WordPress\TwigReaper;
+use WpTwigHelper\TwigReaper;
 
 class TwigHelperTest extends \PHPUnit_Framework_TestCase {
 
@@ -79,7 +79,7 @@ class TwigHelperTest extends \PHPUnit_Framework_TestCase {
     $this->helper->setBaseDir(getcwd());
     $reaper = $this->helper->getTwigReaper();
 
-    $this->assertInstanceOf('WordPress\\TwigReaper', $reaper);
+    $this->assertInstanceOf('WpTwigHelper\\TwigReaper', $reaper);
   }
 
   function test_it_adds_twig_suffix_if_needed() {

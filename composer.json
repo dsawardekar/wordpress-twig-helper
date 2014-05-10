@@ -1,6 +1,6 @@
 {
   "name": "dsawardekar/wordpress-twig-helper",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "library",
   "description": "Helpers for using Twig with WordPress",
   "keywords": ["twig","wordpress"],
@@ -22,10 +22,10 @@
   },
   "autoload": {
     "psr-4": {
-      "WordPress\\": "lib/WordPress"
+      "WpTwigHelper\\": "lib/WpTwigHelper"
     }
   },
   "bin": [
-    "wordpress-twig-helper/bin/twig_compile"
+    "bin/twig_compile"
   ]
 }

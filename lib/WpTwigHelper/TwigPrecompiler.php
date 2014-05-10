@@ -1,6 +1,6 @@
 <?php
 
-namespace WordPress;
+namespace WpTwigHelper;
 
 class TwigPrecompiler {
 
