@@ -1,6 +1,6 @@
 <?php
 
-use WordPress\TwigReaper;
+use WpTwigHelper\TwigReaper;
 
 class TwigReaperTest extends PHPUnit_Framework_TestCase {
 
@@ -11,7 +11,7 @@ class TwigReaperTest extends PHPUnit_Framework_TestCase {
   }
 
   function test_it_knows_if_template_directory_is_valid() {
-    $actual = $this->reaper->isValidTemplateDir('lib/WordPress');
+    $actual = $this->reaper->isValidTemplateDir('lib/WpTwigHelper');
     $this->assertTrue($actual);
   }
 
@@ -22,15 +22,15 @@ class TwigReaperTest extends PHPUnit_Framework_TestCase {
 
   function test_it_removes_non_existing_dirs() {
     $sourceDirs = array(
-      'lib/WordPress',
-      'test/WordPress',
+      'lib/WpTwigHelper',
+      'test/WpTwigHelper',
       'foo/bar',
       'bar/foo'
     );
 
     $expected = array(
-      'lib/WordPress',
-      'test/WordPress'
+      'lib/WpTwigHelper',
+      'test/WpTwigHelper'
     );
 
     $actual = $this->reaper->toValidTemplateDirs($sourceDirs);

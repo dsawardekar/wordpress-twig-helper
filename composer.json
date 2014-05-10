@@ -22,10 +22,10 @@
   },
   "autoload": {
     "psr-4": {
-      "WordPress\\": "lib/WordPress"
+      "WpTwigHelper\\": "lib/WpTwigHelper"
     }
   },
   "bin": [
-    "wordpress-twig-helper/bin/twig_compile"
+    "bin/twig_compile"
   ]
 }

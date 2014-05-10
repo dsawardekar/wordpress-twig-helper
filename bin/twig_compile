@@ -3,7 +3,7 @@
 
 require __DIR__ . '../../vendor/autoload.php';
 
-use WordPress\TwigPrecompilerApp;
+use WpTwigHelper\TwigPrecompilerApp;
 
 $app = new TwigPrecompilerApp();
 $app->run();

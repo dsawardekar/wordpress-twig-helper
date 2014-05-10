@@ -1,6 +1,6 @@
 <?php
 
-namespace WordPress;
+namespace WpTwigHelper;
 
 class TwigPrecompilerAppTest extends \PHPUnit_Framework_TestCase {
 
