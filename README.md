@@ -2,6 +2,9 @@
 
 A tiny Library for using [Twig][2] Templates in WordPress Plugins & Themes.
 
+Deprecated. This repo has been merged into
+[Arrow](https://github.com/dsawardekar/arrow).
+
 # Usage
 
 The `WpTwigHelper\TwigHelper` is a helper class that provides the bulk of
